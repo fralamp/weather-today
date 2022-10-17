@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    background: linear-gradient(145deg, #08244F, #134CB5, #0B42AB);
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    font-weight: 400;
+    line-height: 1.6;
+    box-sizing: border-box;
+    background: linear-gradient(145deg, #08244F , #134CB5 , #0B42AB );
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+

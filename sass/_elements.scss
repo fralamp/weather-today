@@ -1,0 +1,289 @@
+.header {
+    max-width: 126rem;
+    margin: 2rem auto 2rem;
+    padding: 0 1.5rem;
+    
+    &__button-group {
+        display: flex;
+        border-radius: 5px;
+        align-items: center;
+
+        & h1 {
+            margin-right: 1.5rem;
+        }
+
+        &--active {
+            background-color: #ffffff;
+            margin-top: 1rem;
+
+            & .header__city,
+            & .header__choice,
+            & .header__geolocation{
+                display: none;
+            }
+
+            & .header__input,
+            & .header__btn-accept{
+                display: block;
+            }
+
+        }
+    }
+
+
+    &__choice{
+        font-size: 3.5rem;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+
+    &__input {
+        display: none;
+        width: 100%;
+        font-size: 2.5rem;
+        padding: 1rem;
+        border: none;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: rgb(64, 64, 247);
+    
+        &::placeholder {
+            color: rgb(64, 64, 247);
+        }
+
+    }
+
+    &__btn-accept{
+        display: none;
+        border: none;
+        font-size: 2.5rem;
+        padding: 1rem;
+        color: rgb(64, 64, 247);
+        font-weight: 700;
+        background-color: white;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+
+    &__geolocation {
+        background: #ffffff url('./../img/geo-icon.svg') bottom no-repeat;
+        width: 3rem;
+        height: 3rem;
+        font-size: 3rem;
+        font-family: inherit;
+        color: white;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__error {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        top: 6rem;
+        padding: 1rem 1.5rem;
+        background-color: white;
+        font-size: 2rem;
+        color: rgb(64, 64, 247);
+        border-radius: 5px;
+    }
+}
+
+.weather {
+    max-width: 126rem;
+    margin: 0 auto ;
+    
+    &__general-info {
+        text-align: center;
+        margin: 0 auto 2.5rem;
+        padding: 0 1.5rem;
+    }
+
+    &__image-today{
+        max-width: 25rem;
+        margin-bottom: 4rem;
+        width: 100%;
+
+        @media screen and (max-width: 400px) {
+            max-width: 14rem;
+        }
+    }
+
+    &__temperatuer{
+        font-size: 6.4rem;
+        line-height: 1;
+        margin-bottom: 2rem;
+    }
+
+    &__precipitations{
+        font-size: 2.4rem;
+    }
+
+    &__max-min-temperature{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__range-max{
+        margin-right: 1.5rem;
+    }
+
+    &__details{
+        display: flex;
+        font-size: 2rem;
+        padding: 1.5rem .6rem;
+        background-color: rgba(0, 16, 38, 0.3);
+        border-radius: 2rem;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__group{
+        display: flex;
+        align-items: center;
+
+        &:nth-child(2){
+            margin: 0 1rem;
+        }
+
+        & img {
+            width: 4rem;
+            height: auto;
+
+            @media screen and (max-width: 400px) {
+                width: 4rem;
+            }
+        }
+
+        &:last-child img{
+            width: 3rem;
+
+            @media screen and (max-width: 400px) {
+                width: 2rem;
+            }
+        }
+    }
+
+    &__pressure{
+        margin-left: 5px;
+    }
+
+    &__humidityy{
+        margin-left: 0px;
+    }
+    
+    &__windy{
+        margin-left: 10px;
+    }
+
+    &__cloudy{
+        margin-left: 5px;
+    }
+
+    &__more {
+        display: flex;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        justify-content: space-evenly;
+
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__today{
+        padding: 1.4rem;
+        font-size: 2rem;
+        background-color: rgba(0, 16, 38, 0.3);
+        border-radius: 2rem;
+        flex: 1;
+        margin-right: 1.5rem;
+
+        @media screen and (max-width: 800px) {
+            margin-right: 0; 
+            margin-bottom: 2.5rem;
+            width: 100%;
+        }
+
+    }
+    &__subtitle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.4rem;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &:not(:last-child) {
+            margin-right: 1.2rem;
+        }
+ 
+        & img {
+            margin: 2rem 0;
+            width: 5rem;
+            height: auto;
+        }
+    }
+
+    &__forecast{
+        padding: 1.4rem;
+        font-size: 2rem;
+        background-color: rgba(0, 16, 38, 0.3);
+        border-radius: 2rem;
+        flex: 1;
+
+        @media screen and (max-width: 800px) {
+            width: 100%;
+        }
+
+    }
+
+    &__forecast-subtitle{
+        margin-bottom: 2.4rem;
+    }
+
+    &__forecast-day{
+        align-items: center;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: max-content 1fr max-content ;
+        grid-column-gap: 3rem;
+        grid-row-gap: .7rem; 
+
+        @media screen and (max-width: 400px) {
+            grid-column-gap: 0;
+        }
+
+        & img {
+            justify-self:center;
+            width: 5rem;
+            height: auto;
+        }
+    }
+
+    &__forecast-temperature{
+        color: rgba(255, 255, 255, 0.5);
+        
+        & span:first-child {
+            margin-right: .7rem;
+            color: white;
+        }
+    }
+}

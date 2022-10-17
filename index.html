@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather</title>
+    <link rel="icon" href="./img/icon.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__button-group">                
+                <h1 class="header__city">Current city:
+                    <span  class="header__choice">Madrid</span>
+                </h1>
+                <button  class="header__geolocation">
+                </button>
+                <input type="text" class="header__input" placeholder="Enter the сity">
+                <button class="header__btn-accept">OK</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="weather">
+            <div class="weather__general-info">
+                <img src="./img/icon.png" alt="icon weather today" class="weather__image-today">
+                <h2 class="weather__temperatuer">28°</h2>
+                <span class="weather__precipitations">Precipitations</span>
+                <div class="weather__max-min-temperature">
+                    <span class="weather__range-max">Max.: 31°C </span>
+                    <span class="weather__range-min">Max.: 25°C </span>
+                </div>
+                <div class="weather__details">
+                    <div class="weather__group">
+                        <img src="./img/cloudy-icon.svg" alt="">
+                        <span class="weather__cloudy">6 %</span>
+                    </div>
+                    <div class="weather__group">
+                        <img src="./img/humidity-icon.svg" alt="">
+                        <span class="weather__humidity">90 %</span>
+                    </div>
+                    <div class="weather__group">
+                        <img src="./img/windy-icon.svg" alt="">
+                        <span class="weather__windy">5 m/s</span>
+                    </div>
+                </div>
+            </div>
+            <div class="weather__more">
+                <div class="weather__today">
+                    <div class="weather__subtitle">
+                        <h3>Today</h3>
+                        <h3 class="weather__date">Mar 9</h3>
+                    </div>
+                    <ul class="weather__list">
+                        <li class="weather__item">
+                            <span class="weather__temperature">29 °C</span>
+                            <img src="./img/weather-preview-icon.png" alt="icon weather">
+                            <span class="weather__time">15:00</span>
+                        </li>
+                        <li class="weather__item">
+                            <span class="weather__temperature">26 °C</span>
+                            <img src="./img/weather-preview-icon.png" alt="icon weather">
+                            <span class="weather__time">18:00</span>
+                        </li>
+                        <li class="weather__item">
+                            <span class="weather__temperature">29 °C</span>
+                            <img src="./img/weather-preview-icon.png" alt="icon weather">
+                            <span class="weather__time">21:00</span>
+                        </li>
+                        <li class="weather__item">
+                            <span class="weather__temperature">29 °C</span>
+                            <img src="./img/weather-preview-icon.png" alt="icon weather">
+                            <span class="weather__time">00:00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="weather__forecast">
+                    <h3 class="weather__forecast-subtitle">
+                        Next Forecast
+                    </h3>
+                    <div class="weather__forecast-day">
+                        <span class="weather__day-week">
+                            Monday
+                        </span>
+                        <img class="weather__icon-next-day" src="./img/rain.png" alt="icon weather">
+                        <div class="weather__forecast-temperature">
+                            <span value="max-temp">13 °C</span>
+                            <span value="min-temp">10 °C</span>
+                        </div>
+                        <span class="weather__day-week">
+                            Tuesday
+                        </span>
+                        <img class="weather__icon-next-day" src="./img/rain.png" alt="icon weather">
+                        <div class="weather__forecast-temperature">
+                            <span value="max-temp">13 °C</span>
+                            <span value="min-temp">10 °C</span>
+                        </div>
+                        <span class="weather__day-week">
+                            Wednesday
+                        </span>
+                        <img class="weather__icon-next-day" src="./img/rain.png" alt="icon weather">
+                        <div class="weather__forecast-temperature">
+                            <span value="max-temp">13 °C</span>
+                            <span value="min-temp">10 °C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>
